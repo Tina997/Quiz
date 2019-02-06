@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
+            android:onClick="onTrueButtonClicked"
             android:padding="22dp"
             android:text="@string/trueButtonLabel" />
 
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
+            android:onClick="onFalseButtonClicked"
             android:padding="22dp"
             android:text="@string/falseButtonLabel" />
     </LinearLayout>
