@@ -79,8 +79,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:padding="22dp"
-            android:text="Button"
-            tools:text="@string/cheatButtonLabel" />
+            android:text="@string/cheatButtonLabel" />
 
         <Button
             android:id="@+id/nextButton"
@@ -88,9 +87,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
+            android:onClick="onNextButtonClicked"
             android:padding="22dp"
-            android:text="Button"
-            tools:text="@string/nextButtonLabel" />
+            android:text="@string/nextButtonLabel" />
     </LinearLayout>
 
 </LinearLayout>

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         falseButton = findViewById(R.id.falseButton);
         cheatButton = findViewById(R.id.cheatButton);
         nextButton = findViewById(R.id.nextButton);
+        questionText.setText("La estatua de la libertad fue un regalo de España a EEUU");
 
     }
     public void onTrueButtonClicked(View view){
@@ -33,5 +34,8 @@ public class MainActivity extends AppCompatActivity {
     public void onFalseButtonClicked(View view){
         Log.e("MainActivity","onFalseButtonClicked()");
         answerText.setText(R.string.falseButtonLabel);
+    }
+    public void onNextButtonClicked(View view){
+        questionText.setText("Cuestion 2");
     }
 }
