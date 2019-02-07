@@ -25,27 +25,35 @@ public class MainActivity extends AppCompatActivity {
         cheatButton = findViewById(R.id.cheatButton);
         nextButton = findViewById(R.id.nextButton);
         questionText.setText("La estatua de la libertad fue un regalo de España a EEUU");
+        answerText.setText("");
 
     }
     public void onTrueButtonClicked(View view){
        // Log.e("MainActivity","onTrueButtonClicked()");
-        if(questionText.getText().equals("La estatua de la libertad fue un regalo de España a EEUU")){
-            answerText.setText("Incorrecto");
-        }else{
-            answerText.setText("Correcto");
+        if(answerText.getText().equals("")) {
+            if (questionText.getText().equals("La estatua de la libertad fue un regalo de España a EEUU")) {
+                answerText.setText("Incorrecto");
+            } else {
+                answerText.setText("Correcto");
+            }
         }
         //answerText.setText(R.string.trueButtonLabel);
     }
     public void onFalseButtonClicked(View view){
        // Log.e("MainActivity","onFalseButtonClicked()");
-        if(questionText.getText().equals("La estatua de la libertad fue un regalo de España a EEUU")){
-            answerText.setText("Correcto");
-        }else{
-            answerText.setText("Incorrecto");
+        if(answerText.getText().equals("")) {
+            if (questionText.getText().equals("La estatua de la libertad fue un regalo de España a EEUU")) {
+                answerText.setText("Correcto");
+            } else {
+                answerText.setText("Incorrecto");
+            }
         }
        // answerText.setText(R.string.falseButtonLabel);
     }
     public void onNextButtonClicked(View view){
-        questionText.setText("La paloma era utilizada como mensajera");
+        if(answerText.getText().equals("Correcto")||answerText.getText().equals("Incorrecto")) {
+            answerText.setText("");
+            questionText.setText("La paloma era utilizada como mensajera");
+        }
     }
 }
